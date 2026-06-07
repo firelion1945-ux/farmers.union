@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>تجمع مزارعي النيل الأبيض | محلية السلام</title>
+    <title>تجمع مزارعي النيل الأبيض</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -23,7 +23,6 @@
             --parallax-img: url('images/background.webp');
         }
         
-        /* شريط التنقل - زجاجي */
         .navbar {
             background: rgba(255, 255, 255, 0.88);
             backdrop-filter: blur(12px);
@@ -53,7 +52,6 @@
         .nav-links a { text-decoration: none; color: var(--green-dark); font-weight: 600; transition: 0.3s; font-size: 0.95rem; }
         .nav-links a:hover { color: var(--green-primary); }
         
-        /* قسم الهيرو */
         .hero {
             min-height: 85vh;
             background: linear-gradient(135deg, rgba(238,247,230,0.95) 0%, rgba(255,255,255,0.95) 100%);
@@ -66,7 +64,6 @@
             position: relative;
             isolation: isolate;
         }
-        /* تأثير خلفية ناعم للهيرو */
         .hero::before {
             content: '';
             position: absolute;
@@ -88,7 +85,6 @@
             .hero-image { width: 100%; }
         }
         
-        /* أزرار التواصل الاجتماعي */
         .social-links { display: flex; gap: 1rem; justify-content: flex-start; margin-top: 1.5rem; flex-wrap: wrap; }
         @media (max-width: 768px) { .social-links { justify-content: center; } }
         .social-btn {
@@ -107,7 +103,6 @@
         .btn-instagram:hover { background: #d62976; color: white; border-color: #d62976; }
         .btn-facebook:hover { background: #1877f2; color: white; border-color: #1877f2; }
         
-        /* قسم البارالاكس مع تحسين الزجاج */
         .parallax {
             background-image: var(--parallax-img);
             background-attachment: fixed;
@@ -142,7 +137,6 @@
             border: 1px solid rgba(255,255,255,0.2);
         }
         
-        /* العناوين */
         .section-title {
             font-size: 2.2rem;
             color: var(--green-dark);
@@ -163,7 +157,6 @@
             border-radius: 4px;
         }
         
-        /* بطاقات القيادات - تصميم زجاجي احترافي */
         .leaders-grid {
             display: flex;
             flex-wrap: wrap;
@@ -234,7 +227,6 @@
             opacity: 0.85;
         }
         
-        /* خدمات الشركة */
         .services { padding: 2rem 5% 4rem; background: transparent; position: relative; }
         .cards { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2rem; }
         .card {
@@ -253,7 +245,6 @@
         .card h3 { font-size: 1.3rem; margin-bottom: 0.6rem; color: var(--green-dark); font-weight: 700; }
         .card p { font-size: 0.85rem; opacity: 0.8; }
         
-        /* زر الاتصال */
         .contact-redirect {
             text-align: center;
             margin: 2rem 0 3rem;
@@ -278,7 +269,6 @@
             box-shadow: 0 12px 24px rgba(30,111,47,0.4);
         }
         
-        /* تذييل احترافي */
         footer {
             background: var(--green-dark);
             color: white;
@@ -348,7 +338,7 @@
         </div>
         <div class="hero-text">
             <h1>نزرع الغد للسودان 🌾</h1>
-            <p>المظلة الجامعة لمزارعي ولاية النيل الأبيض: محلية السلام؛ نسعى لإبراز جهودكم، وحماية حقوقكم، وتطوير القطاع الزراعي لضمان الأمن الغذائي والتنمية المستدامة.</p>
+            <p>المظلة الجامعة لمزارعي ولاية النيل الأبيض؛ نسعى لإبراز جهودكم، وحماية حقوقكم، وتطوير القطاع الزراعي لضمان الأمن الغذائي والتنمية المستدامة.</p>
             
             <div class="social-links">
                 <a href="https://x.com/wnsfarmersuni" target="_blank" class="social-btn btn-x"><i class="fab fa-twitter"></i> X</a>
@@ -381,7 +371,7 @@
 </main>
 
 <footer>
-    <p>© 2026 تجمع مزارعي ولاية النيل الأبيض (محلية السلام)</p>
+    <p>© 2026 تجمع مزارعي ولاية النيل الأبيض</p>
     <div class="social-links">
         <a href="https://x.com/wnsfarmersuni" target="_blank"><i class="fab fa-twitter"></i></a>
         <a href="https://www.instagram.com/wns.farmers.union/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -394,31 +384,31 @@
     const leadersData = [
         { 
             name: "كلمة رئيس التجمع", 
-            role: "رئيس تجمع مزارعي ولاية النيل الأبيض (محلية السلام)", 
+            role: "رئيس تجمع مزارعي ولاية النيل الأبيض", 
             desc: "أحيي أهلنا المزارعين الأوفياء، وأنتم تخوضون معركة الإنتاج. أدعوكم لمزيد من الجهد والعطاء في هذا الموسم؛ فبسواعدكم وعرقكم نؤمّن قوت الشعب ونحمي أمننا الغذائي. إنتاجنا هو صمام الأمان للبلاد، ومعاً سننتصر لنهضتنا.", 
             img: "images/message.jpeg" 
         },
         { 
             name: "السيد / عبد الباقي العوض محمد توم", 
-            role: "رئيس تجمع مزارعي ولاية النيل الأبيض (محلية السلام)", 
+            role: "رئيس تجمع مزارعي ولاية النيل الأبيض", 
             desc: "قيادةٌ وطنية تسعى لخدمة قضايا المزارعين، وتوحيد الرؤى، والدفع بالإنتاج نحو آفاق أرحب لتأمين الأمن الغذائي للبلاد.", 
             img: "images/baki.jpg" 
         },
         { 
             name: "السيد / أحمد حسن عبدالرحيم", 
-            role: "الأمانة العامة لتجمع مزارعي ولاية النيل الأبيض (محلية السلام)", 
+            role: "الأمانة العامة لتجمع مزارعي ولاية النيل الأبيض", 
             desc: "يتولى تنظيم أعمال التجمع، وتنسيق الجهود الإدارية والميدانية، والإشراف على تنفيذ الخطط والمبادرات التي تخدم المزارعين وتدفع بعجلة الإنتاج.", 
             img: "images/ahmed.jpg" 
         },
         { 
             name: "السيد / عبدالمنعم حامد ادم  +  السيد / موسى الناير ادم", 
-            role: "الأمانة المالية لتجمع مزارعي ولاية النيل الأبيض (محلية السلام)", 
+            role: "الأمانة المالية لتجمع مزارعي ولاية النيل الأبيض", 
             desc: "أمناء المال المسؤولين عن إدارة الموارد وحفظ حقوق المزارعين بكل أمانة وشفافية. وفقهم الله لحفظ الأمانة وإنجاح هذا الصرح.", 
             img: "images/money.jpg" 
         },
         { 
             name: "المهندس الزراعي / حاج النور علي مجذوب", 
-            role: "الدعم الفني لمزارعي ولاية النيل الأبيض (محلية السلام)", 
+            role: "الدعم الفني لمزارعي ولاية النيل الأبيض", 
             desc: "يتولى الإشراف والمتابعة الميدانية لتقديم الاستشارات الزراعية، وتوجيه المزارعين بأحدث التقنيات لرفع جودة المحاصيل وحل العقبات الإنتاجية.", 
             img: "images/haj.jpg" 
         }
