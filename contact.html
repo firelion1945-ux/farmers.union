@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>تواصل معنا | تجمع مزارعي النيل الأبيض</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f9fbf6; color: #1a3a1a; direction: rtl; line-height: 1.6; }
+        :root { 
+            --green-primary: #1e6f2f; 
+            --green-light: #d0ecd8; 
+            --green-dark: #0b4220; 
+            --white: #ffffff; 
+            --gray-light: #f4faf2; 
+            --shadow: 0 20px 35px -10px rgba(0,0,0,0.1);
+            --shadow-sm: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .navbar {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(8px);
+            box-shadow: var(--shadow-sm);
+            padding: 0.8rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border-bottom: 2px solid rgba(30,111,47,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo-area { display: flex; align-items: center; gap: 15px; }
+        .logo-img { height: 60px; width: auto; border-radius: 12px; transition: 0.3s; }
+        .logo-text h1 { font-size: 1.4rem; color: var(--green-primary); }
+        .logo-text p { font-size: 0.75rem; color: var(--green-dark); font-weight: bold; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--green-dark); font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: var(--green-primary); }
+        
+        .contact-header {
+            background: linear-gradient(135deg, #eef7e6, #ffffff);
+            padding: 2rem 5%;
+            text-align: center;
+        }
+        .contact-header h1 {
+            font-size: 2rem;
+            color: var(--green-dark);
+            margin-bottom: 0.5rem;
+        }
+        .contact-header p {
+            color: #2c5a2e;
+        }
+        
+        .contact-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            padding: 2rem 5% 3rem;
+            background: var(--white);
+        }
+        .contact-person {
+            background: var(--gray-light);
+            border-radius: 28px;
+            padding: 1.8rem;
+            width: 360px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: 0.3s;
+            border-top: 5px solid var(--green-primary);
+        }
+        .contact-person:hover { transform: translateY(-8px); }
+        .contact-person h3 {
+            color: var(--green-primary);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        .contact-person .position {
+            color: var(--green-dark);
+            font-weight: bold;
+            margin-bottom: 1.2rem;
+            font-size: 0.85rem;
+            background: rgba(30,111,47,0.1);
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 30px;
+        }
+        .phone-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--white);
+            margin: 0.8rem 0;
+            padding: 0.7rem 1.2rem;
+            border-radius: 60px;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .phone-number {
+            font-family: monospace;
+            font-size: 1rem;
+            font-weight: bold;
+            color: var(--green-dark);
+            direction: ltr;
+        }
+        .phone-actions a {
+            display: inline-block;
+            margin: 0 5px;
+            color: white;
+            width: 38px;
+            height: 38px;
+            line-height: 38px;
+            border-radius: 50%;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .phone-actions a.whatsapp { background: #25D366; }
+        .phone-actions a.call { background: var(--green-primary); }
+        .phone-actions a:hover { transform: scale(1.1); opacity: 0.9; }
+        
+        .back-home {
+            text-align: center;
+            margin: 1rem 0 2rem;
+        }
+        .back-home .btn {
+            background: var(--green-primary);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+        .back-home .btn:hover {
+            background: var(--green-dark);
+            transform: translateY(-3px);
+        }
+        
+        .social-links-footer {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .social-links-footer a {
+            color: var(--green-dark);
+            background: var(--gray-light);
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            transition: 0.3s;
+            font-size: 1.2rem;
+        }
+        .social-links-footer a:hover {
+            background: var(--green-primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        footer {
+            background: var(--green-dark);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .signature {
+            margin-top: 1rem;
+            padding-top: 0.8rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 480px) {
+            .contact-person { width: 95%; }
+            .phone-item { flex-direction: column; }
+            .navbar { flex-direction: column; gap: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo-area">
+            <!-- اللوجو من مجلد images مثل باقي الصور -->
+            <img class="logo-img" src="images/logo.jpg" alt="الشعار">
+            <div class="logo-text">
+                <h1><i class="fas fa-seedling"></i> تجمع مزارعي النيل الأبيض</h1>
+                <p>محلية السلام .. أولاً من أجل أرض السودان</p>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="index.html#leaders">القيادات</a></li>
+            <li><a href="index.html#services">خدماتنا</a></li>
+            <li><a href="contact.html">تواصل</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="contact-header">
+        <h1><i class="fas fa-phone-alt"></i> تواصل مع قياداتنا</h1>
+        <p>نرحب بتواصلكم مع أمناء وقيادات تجمع مزارعي ولاية النيل الأبيض (محلية السلام)</p>
+    </div>
+
+    <div class="contact-cards">
+        <!-- عبدالباقي العوض -->
+        <div class="contact-person">
+            <h3>السيد / عبدالباقي العوض</h3>
+            <div class="position">رئيس تجمع مزارعي ولاية النيل الأبيض (محلية السلام)</div>
+            <div class="phone-item">
+                <span class="phone-number">+249 912 170 564</span>
+                <div class="phone-actions">
+                    <a href="https://wa.me/249912170564" target="_blank" class="whatsapp" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                    <a href="tel:+249912170564" class="call" title="اتصال"><i class="fas fa-phone-alt"></i></a>
+                </div>
+            </div>
+            <div class="phone-item">
+                <span class="phone-number">+249 123 063 191</span>
+                <div class="phone-actions">
+                    <a href="https://wa.me/249123063191" target="_blank" class="whatsapp" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                    <a href="tel:+249123063191" class="call" title="اتصال"><i class="fas fa-phone-alt"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- أحمد حسن عبدالرحيم -->
+        <div class="contact-person">
+            <h3>السيد / أحمد حسن عبدالرحيم</h3>
+            <div class="position">الأمانة العامة لتجمع مزارعي ولاية النيل الأبيض (محلية السلام)</div>
+            <div class="phone-item">
+                <span class="phone-number">+249 912 326 100</span>
+                <div class="phone-actions">
+                    <a href="https://wa.me/249912326100" target="_blank" class="whatsapp" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                    <a href="tel:+249912326100" class="call" title="اتصال"><i class="fas fa-phone-alt"></i></a>
+                </div>
+            </div>
+            <div class="phone-item">
+                <span class="phone-number">+249 123 926 100</span>
+                <div class="phone-actions">
+                    <a href="https://wa.me/249123926100" target="_blank" class="whatsapp" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                    <a href="tel:+249123926100" class="call" title="اتصال"><i class="fas fa-phone-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="back-home">
+        <a href="index.html" class="btn"><i class="fas fa-home"></i> العودة إلى الصفحة الرئيسية</a>
+    </div>
+    
+    <div style="text-align: center; margin-bottom: 1rem;">
+        <div class="social-links-footer">
+            <a href="https://x.com/wnsfarmersuni" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/wns.farmers.union/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61590702959129" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 تجمع مزارعي ولاية النيل الأبيض (محلية السلام)</p>
+    <div class="signature">Edited by Hassan Ahmed Hassan</div>
+</footer>
+</body>
+</html>
